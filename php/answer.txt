@@ -1,0 +1,66 @@
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 4
+Server version: 5.6.12-log MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database queen;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> use queen;
+Database changed
+mysql> CREATE TABLE king (
+    ->     sname VARCHAR(255),
+    ->     fname VARCHAR(255),
+    ->     mname VARCHAR(255),
+    ->     scname VARCHAR(255),
+    ->     marks INT,
+    ->     cname VARCHAR(255)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++-----------------+
+| Tables_in_queen |
++-----------------+
+| king            |
++-----------------+
+1 row in set (0.00 sec)
+
+mysql> INSERT INTO king (sname, fname, mname, scname, marks, cname)
+    -> VALUES
+    -> ('John', 'Doe', 'M', 'Science', 90, 'Physics'),
+    -> ('Alice', 'Smith', 'N', 'Math', 85, 'Algebra'),
+    -> ('Bob', 'Johnson', 'O', 'History', 88, 'World History');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from king;
++-------+---------+-------+---------+-------+---------------+
+| sname | fname   | mname | scname  | marks | cname         |
++-------+---------+-------+---------+-------+---------------+
+| John  | Doe     | M     | Science |    90 | Physics       |
+| Alice | Smith   | N     | Math    |    85 | Algebra       |
+| Bob   | Johnson | O     | History |    88 | World History |
++-------+---------+-------+---------+-------+---------------+
+3 rows in set (0.00 sec)
+
+mysql>mysql> select * from king;
++-------+---------+-------+---------+-------+---------------+
+| sname | fname   | mname | scname  | marks | cname         |
++-------+---------+-------+---------+-------+---------------+
+| John  | Doe     | M     | Science |    90 | Physics       |
+| Alice | Smith   | N     | Math    |    85 | Algebra       |
+| Bob   | Johnson | O     | History |    88 | World History |
+| sujan | hello   | M     | tvs     |   302 | SDSDSD        |
++-------+---------+-------+---------+-------+---------------+
+4 rows in set (0.00 sec)
+
+mysql>
